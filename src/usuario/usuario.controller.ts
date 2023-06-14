@@ -7,8 +7,9 @@ export class UsuarioController {
   constructor(private usuarioService: UsuarioService) {}
 
   @Get(':nomeDeUsuario')
-  public buscaPorNomeDeUsuario(@Param('nomeDeUsuario') nomeDeUsuario: string){
-    const usuarioEncontrado = this.usuarioService.buscarPorNomeDeUsuario(nomeDeUsuario);
+  public buscaPorNomeDeUsuario(@Param('nomeDeUsuario') nomeDeUsuario: string) {
+    const usuarioEncontrado =
+      this.usuarioService.buscarPorNomeDeUsuario(nomeDeUsuario);
     return usuarioEncontrado;
   }
 
